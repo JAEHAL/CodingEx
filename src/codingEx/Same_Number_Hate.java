@@ -11,24 +11,26 @@ public class Same_Number_Hate {
 		int[] arr = {4,4,4,3,3};
 		
 		List<Integer> list = new ArrayList<>();
+		int temp = -1; // arr안의 값과 비교하기 위한 값 설정
 		
-		for(int i=0; i<arr.length-1; i++) {
-			if(arr[i] != arr[i+1] && arr[i] != arr[i-1]) { // 양 옆에 중복이 하나도 없는 값 구하기
-				System.out.println(arr[i]+"a");
+		//arr값 비교
+		for(int i=0; i<arr.length; i++) {
+			if(temp == arr[i]) {}
+			else {
 				list.add(arr[i]);
-			}
-			
-			else if(arr[i] == arr[i+1]) { // 양 옆이 같을 때
-				if(i==0 || i==arr.length-2) { // 첫 번째 값과 마지막 값이 같은 거는 조건 따로
-					System.out.println(arr[i]+"b");
-					list.add(arr[i]);
-				}
-				else {
-					System.out.println(arr[i]+"c");
-					list.add(arr[i]);
-				}
+				temp=arr[i];
 			}
 		}
+		
+		//위의 방법보다 더 간단한 방법
+		/*
+		 * for(int i : arr) { 
+		 * 		if(temp == i) {} 
+		 *		else { 
+		 * 			list.add(i); temp=i; 
+		 * 		} 
+		 * }
+		*/
 		
 		int[] answer = new int[list.size()];
 		for(int i=0; i<list.size(); i++) {

@@ -5,20 +5,24 @@ package codingEx;
 public class Number_Plus {
 	public static void main(String[] args) {
 		int a = 1;
-		int b = 6;
+		int b = 10;
 		
 		long answer = 0;
-		int mid = 0;
 		
-		while(true) {
-			if(a>b) {
-				mid = (a+b)/2;
-				
+		if(a==b) {
+			answer = a;
+		}
+		else if(a!=b) {
+			if(a<b) {
+				for(int i=a; i<=b; i++) {
+					answer += i;
+				}
 			}
-			else if(a<b) {
-				
+			else if(a>b) {
+				for(int i=b; i<=a; i++) {
+					answer += i;
+				}
 			}
-			break;
 		}
 		
 		System.out.println(answer);

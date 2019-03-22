@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class String_sort {
 	public static void main(String[] args) {
-		String[] strings = {"abce","abcd","cda"};
+		String[] strings = {"abcca","adcca","cda"};
 		int n = 2;
 		
 		String[] answer = new String[strings.length];
@@ -25,8 +25,7 @@ public class String_sort {
 		
 		for(int i=0; i<num.length; i++) {
 			for(int j=0; j<strings.length; j++) {
-//				System.out.println(num[i] + " " + strings[j].substring(n));
-				if(num[i] == strings[j].substring(n)) {
+				if(num[i].equals(strings[j].substring(n))) {
 					answer[i] = strings[j];
 				}
 			}

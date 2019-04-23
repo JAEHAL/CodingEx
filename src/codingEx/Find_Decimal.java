@@ -4,6 +4,7 @@ package codingEx;
 
 public class Find_Decimal {
 	public static void main(String[] args) {
+		int x; // 문제 완료 x
 		int n = 10;
 		int answer = 0;
 		

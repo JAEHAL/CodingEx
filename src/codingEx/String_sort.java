@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class String_sort {
 	public static void main(String[] args) {
+		int x; // 문제 완료 x
 		String[] strings = {"abcca","adcca","cda"};
 		//String[] strings = {"abce","abcd","cdx"};
 		int n = 2;

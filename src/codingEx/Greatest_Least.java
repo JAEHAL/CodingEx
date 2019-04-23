@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class Greatest_Least {
 	public static void main(String[] args) {
+		int x; // 문제 완료 x
 		int n=3, m=5;
 		int[] answer = new int[2];
 		

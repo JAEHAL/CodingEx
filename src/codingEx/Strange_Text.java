@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class Strange_Text {
 	public static void main(String[] args) {
+		int x; // 문제 완료 x
 		String s = "try hello world";
 		String answer = "";
 		

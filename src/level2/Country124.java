@@ -4,8 +4,7 @@ package level2;
 
 public class Country124 {
 	public static void main(String[] args) {
-		int x;
-		int n = 21;
+		int n = 6;
 		String answer = "";
 		
 		int rmd;

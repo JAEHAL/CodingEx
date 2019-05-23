@@ -9,8 +9,8 @@ import java.util.Queue;
 
 public class Function_Dev {
 	public static void main(String[] args) {
-		int[] progresses = {93,30,55};
-		int[] speeds = {1,30,5};
+		int[] progresses = {93,30,55,60,40,65};
+		int[] speeds = {1,30,5,10,60,7};
 		int[] answer = {};
 		
 		Queue<Integer> q = new LinkedList<>(); // 작업일 계산값을 넣기 위한 큐 배열
@@ -27,11 +27,28 @@ public class Function_Dev {
 		
 		int num = 0; // 작업량 간 비교를 위한 0으로 초기화
 		int target; // 비교하기 위한 첫 값을 넣기 위한 변수
+		
 		while(!q.isEmpty()) { // 큐가 계속해서 비어있지 않는지 확인을 해주면서 출력을 해야 큐안에 모든 내용을 출력할 수 있다.
 			target = q.poll();
-			System.out.println(target);
+			num++;
 			
-			System.out.println(q.poll());
+			while(!q.isEmpty()) {
+				if(target>q.peek()) {
+					q.poll();
+					num++;
+				}
+				else {
+					list.add(num);
+					num=0;
+					break;
+				}
+			}
+		}
+		list.add(num);
+		
+		answer = new int[list.size()];
+		for(int i=0; i<list.size(); i++) {
+			answer[i] = list.get(i);
 		}
 		
 		System.out.println(Arrays.toString(answer));
